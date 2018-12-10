@@ -1,0 +1,28 @@
+#scroll-to-top {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  /* image replacement properties */
+  overflow: hidden;
+  z-index: 999;
+  border-radius: 4px;
+  text-indent: 100%;
+  white-space: nowrap;
+  background: #229ac8 url(../image/top-arrow.svg) no-repeat center 50%;
+  visibility: hidden; 
+  opacity: 0; 
+  -webkit-transition: opacity .3s ease-out, visibility .3s ease-out;
+  transition: opacity .3s ease-out, visibility .3s ease-out;
+}
+#scroll-to-top.show {
+  visibility: visible;
+  opacity: .7;
+}
+#scroll-to-top:hover {
+  opacity: 1;
+}

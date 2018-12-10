@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+  <name>YokoArt Scroll to top</name>
+  <code>scroll-to-top</code>
+  <version>1.0</version>
+  <author>Sergey Pustovit</author>
+  <link>yokoart.com.ua</link>
+
+  <file path="catalog/controller/common/footer.php">
+    <operation>
+      <search>
+        <![CDATA[public function index() {]]>
+      </search>
+      <add position="after">
+        <![CDATA[
+		$this->document->addStyle('catalog/view/theme/default/stylesheet/scroll-to-top.css');
+		$this->document->addScript('catalog/view/javascript/scroll-to-top.js');
+      ]]>
+      </add>
+    </operation>
+  </file>
+
+  <file path="catalog/view/theme/*/template/common/footer.tpl">
+    <operation>
+      <search>
+        <![CDATA[</body>]]>
+      </search>
+      <add position="before">
+        <![CDATA[
+        <a id="scroll-to-top"></a>
+      ]]>
+      </add>
+    </operation>
+  </file>
+
+</modification>
